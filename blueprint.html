@@ -228,6 +228,86 @@
               'Kevin Bacon',
               'Sherilyn Fenn'
             ]
+          },
+          'Conlanging: The Art of Crafting Tongues': {
+            media: 'documentary',
+            actors: [
+              'Marc Okrand',
+              'Christine Schreyer', // // Linguistics professor and craetor of Kryptonian language for DCEU
+              'Robyn Stewart',
+              'Jason Momoa', // Speaks Dothraki in Game of Thrones. Interviewed in the film. Bacon Number 2
+            ]
+          },
+          'Conlanging: The Art of Crafting Tongues': {
+            media: 'documentary material',
+            // This film showed (probably as fair use), clips of constructed languages from the following movies:
+            // * Game of Thrones
+            // * Lord of the Rings: The Fellowship of the Ring
+            // * Star Trek III
+            // * The Hobbit: The Battle of the Five Armies
+            // * Star Trek: Into Darkness
+            // * Avatar
+            // * Man of Steel
+            actors: [
+              'Marc Okrand',
+              'Christine Schreyer', // Linguistics professor and craetor of Kryptonian language for DCEU
+              'Robyn Stewart',
+              'Jason Momoa', // Speaks Dothraki in Game of Thrones. Interviewed in the film. Bacon Number 2
+
+              // Below is from "additional material"
+              'Liv Tyler', // Speaks Elvish. LotR: FotR. Bacon number 1!
+              'Viggo Mortensen', // Speaks Elvish. LotR: FotR. Bacon number 2
+              'Elijah Wood', // LotR: FotR. Bacon Number 1!
+              'Ian McKellen', // LotR: FotR. Bacon Number 2
+
+              'Manu Bennett', // Speaks Orcish. Hobbit: BotFA. Bacon Number 2
+              'Lawrence Makoare', // Speaks Orcish. Hobbit: BotFA. Bacon Number 2
+
+              'Emilia Clarke', // Speaks High Valyrian and Dothraki. Game of thrones. Bacon Number 2
+              'Dan Hildebrand', // Speaks High Valyrian in Game of Thrones. Bacon Number 2
+
+              'Christopher Lloyd', // Speaks Klingon. Star Trek III. Bacon number 2
+              'William Shatner', // Star Trek III. Bacon Number 2
+              'Robin Curtis', // Star Trek III. Bacon Number 2
+              'Merritt Butrick', // Star Trek III. Bacon Number 2
+              'Leonard Nimoy', // Star Trek III stills. Bacon Number 2
+
+              'Sean Blakemore', // Speaks Klingon. Star Trek: Into Darkness. Bacon Number 2
+              'Zoë Saldaña', // Speaks Klingon. Star Trek: Into Darkness. Bacon number 1.5 (She has a pseudo appearance in Guardians Hoilday special)
+
+              'Zoë Saldaña', // Speaks Na'vi. Avatar (and appears in behind the scenes footage from Avatar). Bacon number 1.5? (She has a pseudo-appearance in Guardians Hoilday special. Kevin Bacon has numerous references in Guardians movies)
+
+              'Russell Crowe', // Man of Steel. Bacon Number 2
+            ]
+          },
+          'Super': {
+            media: 'movie',
+            actors: [
+              'Kevin Bacon',
+              'Liv Tyler'
+            ]
+          },
+          '8': {
+            media: 'documentary',
+            actors: [
+              'Kevin Bacon',
+              'George Takei'
+            ]
+          },
+
+          'Dawn of Justice': {
+            media: 'movie',
+            actors: [
+              'Christine Schreyer', // Linguistics professor and craetor of Kryptonian for Man of Steel and Dawn of Justice https://www.imdb.com/name/nm8337307/?ref_=fn_all_nme_1
+              'Jesse Eisenberg',
+            ]
+          },
+          'Beyond All Boundaries': {
+            media: 'movie',
+            actors: [
+              'Jesse Eisenberg',
+              'Kevin Bacon'
+            ]
           }
         },
 
@@ -295,6 +375,7 @@ ${previous.display()}`;
             'linear fiction': ['play', 'movie', 'television'],
             'video games': ['play', 'movie', 'video game'],
             'documentaries': ['play', 'movie', 'television', 'documentary'],
+            "documentaries' additional material": ['play', 'movie', 'television', 'documentary', 'documentary material']
           }
 
           return Object.fromEntries(Object.entries(initialParameters).map(([key, allowedMedia]) => {

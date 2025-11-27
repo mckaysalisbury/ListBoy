@@ -30,14 +30,30 @@
                 ListBoy.classListAdd = "alternateClassAdd";
                 ListBoy.RenderTo(arrayFunc, "arrayFuncDup");
             });
-        </script>
+
+    </script>
     </head>
     <body>
         <p>
             This document is just an area I use to test out a few features. Dig in to see how things
-            work.
+            work. All three should be present after a few seconds.
         </p>
+        ----------------------------------
         <div id="arrayFunc"></div>
+        ----------------------------------
         <div id="arrayFuncDup"></div>
+        ----------------------------------
+        <div id="arrayFuncDefer"></div>
+        ----------------------------------
+        <div>There should be three sets of content above this line.</div>
+
+        <script>
+
+            window.addEventListener("DOMContentLoaded", () => {
+                // run just after DOMContentLoaded
+                ListBoy.RenderTo("Needs to show up.", "arrayFuncDefer");
+            });
+
+        </script>
     </body>
 </html>

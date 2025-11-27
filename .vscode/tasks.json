@@ -21,7 +21,11 @@
             "problemMatcher": [
                 "$tsc-watch"
             ],
-            "group": "build"
+            "group": "build",
+            "isBackground": true,
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
         }
     ]
 }

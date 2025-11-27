@@ -75,13 +75,12 @@ var ListBoy = /** @class */ (function () {
     ListBoy.RenderTo = function (dataObject, targetId, mappers) {
         var _this = this;
         var cleanMappers = normalize(mappers);
-        if (document.readyState === "complete") {
-            this.ReadyToRenderTo(dataObject, targetId, cleanMappers);
+        var ready = function () { return _this.ReadyToRenderTo(dataObject, targetId, cleanMappers); };
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", ready);
         }
         else {
-            document.addEventListener("DOMContentLoaded", function (event) {
-                _this.ReadyToRenderTo(dataObject, targetId, cleanMappers);
-            });
+            ready();
         }
     };
     /**
@@ -132,11 +131,11 @@ var ListBoy = /** @class */ (function () {
                 return item;
             }
             else {
-                throw new Error("Don't know how to build an object with tag: " + item.tagName);
+                throw new Error("Don't know how to build an object with tag: ".concat(item.tagName));
             }
         }
         else {
-            throw new Error("Don't know how to build a " + typeof item);
+            throw new Error("Don't know how to build a ".concat(typeof item));
         }
     };
     ListBoy.MarkdownTag = function (content, format) {

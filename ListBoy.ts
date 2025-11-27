@@ -83,12 +83,13 @@ class ListBoy {
      */
     static RenderTo(dataObject: any, targetId: string, mappers?: Partial<Mappers>): void {
         const cleanMappers = normalize(mappers)
-        if (document.readyState === "complete") {
-            this.ReadyToRenderTo(dataObject, targetId, cleanMappers);
+
+        const ready = () => this.ReadyToRenderTo(dataObject, targetId, cleanMappers);
+
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", ready);
         } else {
-            document.addEventListener("DOMContentLoaded", event => {
-                this.ReadyToRenderTo(dataObject, targetId, cleanMappers);
-            });
+            ready();
         }
     }
 
